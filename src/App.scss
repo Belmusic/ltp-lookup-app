@@ -1,0 +1,33 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  position: fixed;
+  top: 0;
+
+  .logo {
+    max-width: 80px;
+    margin-right: 10px;
+  }
+
+  .title {
+
+  }
+}
+
+.participant {
+  margin-bottom: 50px;
+}
+
+

@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import './App.scss';
+import data from './data.json';
+import logo from './assets/ltp-logo.png';
+import ParticipantCard from './components/ParticipantCard';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+// Define the ParticipantData interface with nullable (absent) properties to prevent crashes
+export interface ParticipantData {
+  Participant: string;
+  Enthusiasm: number | null;
+  MBOLevel: string | null;
+  Reliability: number | null;
+  Total: string | null;
 }
 
-export default App
+// Set up participant data state and fetch data when the component mounts
+const App: React.FC = () => {
+  const [participantData, setParticipantData] = useState<ParticipantData[]>([]);
+
+  useEffect(() => {
+    setParticipantData(data);
+  }, []);
+
+  return (
+    <div className='app'>
+      <div className='header'>
+        <a href='https:/ltp.nl'>
+          <img className='logo' src={logo} alt='logo' />
+        </a>
+        <h1 className='title'>Look it app!</h1>
+      </div>
+      <div className='body'>
+        {/* Map over participantData and render ParticipantCard for each participant */}
+        {participantData.map((participant, index) => (
+          <ParticipantCard key={index} participant={participant} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default App;
