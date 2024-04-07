@@ -2,16 +2,23 @@
     {
       "Participant": "Vera Voorbeeld",
       "Enthusiasm": 4.8,
-      "MBOLevel": "D",
+      "MBOLevel": "C",
       "Reliability": 2.4,
       "Total": "4.0"
     },
     {
       "Participant": "Donald Duck",
-      "Enthusiasm": 2.4,
+      "Enthusiasm": 2.5,
       "MBOLevel": "A",
       "Reliability": 3.2,
       "Total": null
+    },
+    {
+      "Participant": "Sherick",
+      "Enthusiasm": "A",
+      "MBOLevel": "B",
+      "Reliability": "C",
+      "Total": "C"
     }
   ]
   
