@@ -1,35 +1,92 @@
 .app {
   display: flex;
   flex-direction: column;
-  margin: 2rem;
-}
-.header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+  margin: 20px;
+  font-size: 16px;
+  font-family: sans-serif;
 
-  .logo {
-    max-width: 80px;
-    margin-right: 10px;
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .logo {
+      max-width: 80px;
+      margin-right: 10px;
+    }
+
+    .title {
+      margin: 0;
+    }
   }
 
-  .title {
-    margin: 0;
+  .body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 500px;
+
+    select {
+      margin-top: 5px;
+      width: 100%;
+      height: 20px;
+      border: transparent;
+      border-radius: 3px;
+    }
+
+    p {
+      margin: 20px 0;
+    }
+
+    span {
+      font-weight: bold;
+    }
   }
-}
 
-.body {
-  display: flex;
-  flex-direction: column;
-}
+  button {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #cd423d;
+    width: 150px;
+    border-radius: 5px;
+    margin: 15px auto 0;
+    padding: 5px;
+    border: transparent;
+    cursor: pointer;
 
-// button {
+    &.disabled {
+      cursor: not-allowed;
+      background-color: #f2c5c4;
+    }
+  }
 
-// }
+  .participant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
 
-.participant {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 50px;
+  .box {
+    background-color: #cce1ee;
+    min-width: 400px;
+    padding: 20px;
+    border-radius: 3px;
+
+    .box-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  .dropdowns {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .dropdown-competency {
+      margin-top: 10px;
+    }
+  }
 }

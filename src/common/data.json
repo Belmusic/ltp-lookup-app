@@ -14,11 +14,25 @@
       "Total": null
     },
     {
-      "Participant": "Sherick",
+      "Participant": "Bel",
       "Enthusiasm": "A",
       "MBOLevel": "B",
       "Reliability": "C",
-      "Total": "C"
+      "Total": "D"
+    },
+    {
+      "Participant": "Coco",
+      "Enthusiasm": null,
+      "MBOLevel": null,
+      "Reliability": null,
+      "Total": null
+    },
+    {
+      "Participant": "Blue",
+      "Enthusiasm": 5,
+      "MBOLevel": 3.75,
+      "Reliability": 2.5,
+      "Total": 4
     }
   ]
   

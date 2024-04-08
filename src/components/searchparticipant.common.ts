@@ -40,6 +40,10 @@ export const summaries = [
   },
 ];
 
-export const participantNames = participantData?.map((participant) => {
-  return { key: participant.Participant, value: participant.Participant };
-});
+// Check if participantData is available before mapping it
+export const participantNames = participantData
+  ? participantData.map((participant) => ({
+      key: participant.Participant,
+      value: participant.Participant,
+    }))
+  : [];

@@ -11,7 +11,7 @@ const App: React.FC = () => (
       </a>
       <h1 className='title'>Look it app!</h1>
     </div>
-    <div className='body' style={{ backgroundColor: 'hotpink' }}>
+    <div className='body'>
       <Suspense fallback={<div>Loading...</div>}>
         <SearchParticipant />
       </Suspense>
