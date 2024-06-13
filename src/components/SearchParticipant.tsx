@@ -50,11 +50,6 @@ const SearchParticipant: React.FC = () => {
 
   // Function to calculate summary based on filters
   const calculateSummary = (): string => {
-    if (filters.summary === 'Type') {
-      // Not possible to determine the type, since participants can have different types of values for the same property, and summary and participant can't be used together
-      return `The type of ${filters.property} is 'level'`;
-    }
-
     const participantArray = participants as Participants;
     const propertyValues =
       participantArray.map((p) => p?.[filters.property])?.filter((v) => v) ||

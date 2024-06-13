@@ -34,10 +34,6 @@ export const summaries = [
     key: 'Average',
     value: 'Average',
   },
-  {
-    key: 'Type',
-    value: 'Type',
-  },
 ];
 
 // Check if participantData is available before mapping it

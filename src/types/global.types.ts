@@ -4,7 +4,7 @@ export type Filters = {
   summary: Summary;
 };
 
-export type Summary = 'Lowest' | 'Highest' | 'Average' | 'Type' | string;
+export type Summary = 'Lowest' | 'Highest' | 'Average' | string;
 
 export type Radio = 'summary' | 'participant';
 
